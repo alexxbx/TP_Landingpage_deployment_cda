@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        SONAR_TOKEN = credentials('sonar-token')
+    }
     stages {
         stage('Continous Integration') {
             steps {
