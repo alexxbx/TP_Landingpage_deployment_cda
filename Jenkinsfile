@@ -9,11 +9,7 @@ pipeline {
         stage ('controle qualité') {
             steps {
                 sh """
-                sonar-scanner \
-                    -Dsonar.projectKey=alex-tp-landingpage \
-                    -Dsonar.sources=. \
-                    -Dsonar.host.url=https://669b-212-114-26-208.ngrok-free.app \
-                    -Dsonar.token=${SONAR_TOKEN}
+                sonar-scanner -v
                 """
             }
         }
