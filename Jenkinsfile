@@ -8,9 +8,13 @@ pipeline {
         }
         stage ('controle qualité') {
             steps {
-                sh """
-                sonar-scanner -v
-                """
+                sh '''
+                sonar-scanner \
+                    -Dsonar.projectKey=alex-tp-landingpage \
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=https://669b-212-114-26-208.ngrok-free.app \
+                    -Dsonar.token=sqp_c80ff15369ce03d13850d65d7fe9a6825aeec970
+                '''
             }
         }
         stage('Deploy via FTP') {
