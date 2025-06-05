@@ -13,7 +13,7 @@ pipeline {
                     -Dsonar.projectKey=alex-tp-landingpage \
                     -Dsonar.sources=. \
                     -Dsonar.host.url=https://669b-212-114-26-208.ngrok-free.app \
-                    -Dsonar.token=sqp_c80ff15369ce03d13850d65d7fe9a6825aeec970
+                    -Dsonar.token="$SONAR_TOKEN"
                 '''
             }
         }
